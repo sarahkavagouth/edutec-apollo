@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.Background {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100vw;
+    height: 85vh;
+    gap: 20px;
+    padding: 30px;
+    background: transparent;
+    background-size: cover;
+
+    h1 {
+        font-family: "Playfair Display", serif;
+        color: white;
+        font-weight: 100;
+        font-size: 3.8rem;
+    }
+
+    .DivsResultado {
+        display: flex;
+        gap: 120px;
+
+        .DivResultado {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 15px 0;
+            align-items: center;
+            width: 450px;
+            height: 350px;
+            border-radius: 32px;
+            background: #A6BFFF;
+
+            font-size: 2rem;
+
+            h3 {
+                font-family: "Playfair Display", serif;
+                padding-right: 180px;
+                font-weight: 300;
+                color: white;
+            }
+
+            h4 {
+                font-family: "Playfair Display", serif;
+                font-weight: 300;
+                color: white;
+                font-size: 11rem;
+
+            }
+
+            span {
+                font-family: "Poppins", sans-serif;
+                color: #4478DD;
+            }
+        }
+
+        .DivBtns {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            flex-direction: column;
+            width: 450px;
+            height: 350px;
+
+            button {
+                font-family: "Poppins", sans-serif;
+                width: 350px;
+                height: 80px;
+                cursor: pointer;
+                background: #A6BFFF;
+                border: 2px solid transparent;
+                color: #002671;
+                font-size: 1.4em;
+                border-radius: 20px;
+
+                transition: all 0.4s ease-in-out;
+
+                &:hover {
+                    background: transparent;
+                    border: 2px solid #A6BFFF;
+                    color: #A6BFFF;
+                }
+            }
+        }
+    }
+}

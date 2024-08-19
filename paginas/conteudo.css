@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+
+.header {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 1361px;
+  height: fit-content;
+  box-sizing: border-box;
+}
+
+body div p {
+  overflow-wrap: break-word;
+  font-family: Poppins, sans-serif;
+  font-weight: 400;
+  font-size: 25px;
+  color: black;
+}
+
+.t-c {
+  overflow-wrap: break-word;
+  font-family: Poppins, sans-serif;
+  font-weight: 700;
+  font-size: 50px;
+  color: black;
+}

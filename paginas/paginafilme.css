@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+main{
+    overflow: hidden;
+}
+.Background{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    height: 85vh;
+}
+
+.Background img{
+     width: 150px; 
+    height: 230px;
+
+
+
+}
+
+h2{
+    color: white;
+    font-size: 40px;
+    font-family: "Poppins", sans-serif;
+  }
+  .Imagensfilmes{
+    display: flex;
+     gap: 40px; 
+  }
+
+  .modal{
+    position: absolute;
+    background: white;
+    width: 60vw;
+    height: 75vh;
+    top: 150px;
+    border-radius: 80px;
+    padding: 20px 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+
+  .info{
+    display: flex;
+  }
+
+  .infomovie{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    gap: 20px;
+  }
+
+  h3{
+    font-size: 40px;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .info1{
+    display: flex;
+    gap: 100px;
+    align-items: center;
+    justify-content: center;
+
+    img{
+        width: 40px;
+    }
+
+    span{
+        font-size: 20px;
+        font-family: "Poppins", sans-serif;
+        font-weight: bold;
+    }
+  }
+
+  .info2{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 60%;
+    gap: 20px;
+    font-family: "Poppins", sans-serif;
+  }
+
+  li{
+    margin-left: 20px;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .descricao{
+    font-size: 20px;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .Botao{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+
+    img{
+        width: 50px;
+    }
+  }

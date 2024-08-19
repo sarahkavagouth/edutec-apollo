@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #02071e;
+    width: 100vw;
+    height: 100vh;
+}
+
+.HeaderQuiz {
+    width: 85vw;
+    display: flex;
+    gap: 50px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+    border-bottom: 1px solid #ffffff7e;
+
+    img {
+        width: 55px
+    }
+}
+
+.HeaderDiv {
+    position: relative;
+    display: flex;
+    gap: 25px;
+
+
+    a {
+        font-family: "Poppins", sans-serif;
+        color: white;
+        font-size: 1.6rem;
+    }
+}
+
+.HeaderQuizItem {
+    position: absolute;
+    left: -85px;
+    padding-bottom: 32px;
+    border-bottom: 3px solid #A6BFFF;
+}
+
+.BackgroundQuiz {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 85vh;
+    gap: 50px;
+    background: url("download.png");
+    background-size: cover;
+}
+
+.QuizTitle {
+    font-size: 8rem;
+    font-family: "Playfair Display", serif;
+    color: white;
+}
+
+.QuizBtn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    background: white;
+    padding: 15px 30px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border-radius: 24px;
+    font-family: "Poppins", sans-serif;
+}

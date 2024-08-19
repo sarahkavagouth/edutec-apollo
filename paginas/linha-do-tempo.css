@@ -1,0 +1,20 @@
+*{
+  display: flexbox;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+   font-family: Poppins, sans-serif;
+  background-color: #010717;
+  color: #ffff;
+}
+
+.acontecimentod {
+  text-align: right;
+  margin-left: 40%;
+}
+
+.acontecimentoe {
+  text-align: left;
+  margin-right: 40%;
+}
+

@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+.Background {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 100vw;
+    height: 85vh;
+    gap: 50px;
+    padding: 100px;
+    background: transparent;
+    background-size: cover;
+
+    .Info {
+        display: flex;
+        gap: 80px;
+        flex-direction: column;
+        color: white;
+        font-family: "Poppins", sans-serif;
+
+        h2 {
+            font-size: 2rem;
+            font-weight: 400;
+        }
+        h3 {
+            width: 500px;
+            font-size: 1.6rem;
+            font-weight: 400;
+        }
+
+        .progressBar {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            background: white;
+            width: 400px;
+            height: 17px;
+            padding: 0 5px;
+            border-radius: 17px;
+        }
+
+        .progress {
+            background: #4478DD;
+            width: 40px;
+            height: 10px;
+            border-radius: 10px;
+        }
+    }
+
+    .Options {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+
+        .OptionsButtons {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            div {
+                display: flex;
+                gap: 20px;
+            }
+
+            button {
+                position: relative;
+                width: 290px;
+                height: 80px;
+                padding-left: 35px;
+                background: white;
+                border: 2px solid transparent;
+                font-size: 1.4em;
+                border-radius: 20px;
+                cursor: pointer;
+
+                transition: all 0.4s ease-in-out;
+
+                span {
+                    font-family: "Playfair Display", serif;
+                    position: absolute;
+                    left: 30px;
+                    top: 21px;
+                }
+
+                &:hover {
+                    background: transparent;
+                    border: 2px solid white;
+                    color: white;
+                }
+            }
+        }
+
+        .Confirm {
+            font-family: "Playfair Display", serif;
+            width: 300px;
+            height: 80px;
+            background: #A6BFFF;
+            color: #02071e;
+            font-size: 1.4em;
+            border-radius: 20px;
+        }
+    }
+}
