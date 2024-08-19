@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   window.addEventListener("scroll", checkSections);
-  checkSections(); // Para verificar as seções ao carregar a página
+  checkSections(); 
 });
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
   }
 
   window.addEventListener('scroll', checkHeaderColor);
-  checkHeaderColor(); // Para verificar ao carregar a página
+  checkHeaderColor(); 
 });
 
 
@@ -48,27 +48,27 @@ document.addEventListener('DOMContentLoaded', () => {
 
   setInterval(() => {
     showSlide(currentSlide + 1);
-  }, 7000); // Trocar de slide a cada 3 segundos
+  }, 7000); 
 });
 
 
 
 
 const titulo = document.querySelector('.titulo');
-    const texto = "Apollo"; // Adiciona uma quebra de linha (\n) entre "Cosmo" e "Tec"
-    titulo.textContent = ''; // Limpa o conteúdo inicial
+    const texto = "Apollo"; 
+    titulo.textContent = ''; 
 
     let index = 0;
     function typeWriter() {
       if (index <= texto.length) {
-        titulo.innerHTML = texto.substring(0, index).replace(/\n/g, "<br/>"); // Substitui \n por quebra de linha HTML
-        titulo.innerHTML += '<span class="cursor"></span>'; // Adiciona o cursor após cada caractere
+        titulo.innerHTML = texto.substring(0, index).replace(/\n/g, "<br/>"); 
+        titulo.innerHTML += '<span class="cursor"></span>'; 
         index++;
-        setTimeout(typeWriter, 200); // Ajuste o tempo para o efeito de digitação
+        setTimeout(typeWriter, 200); 
       }
     }
 
-    // Chama a função ao carregar a página
+   
     typeWriter();
 
     const menuBtn = document.querySelector('.menu-btn');
@@ -99,16 +99,15 @@ const titulo = document.querySelector('.titulo');
 
     var logoImage = document.getElementById("logoImage");
 
-    // Adicionando um evento de clique à imagem
+  
     logoImage.addEventListener("click", function() {
-      // Fazendo a página rolar imediatamente até o topo
+    
       window.scrollTo(0, 0);
     });
 
 
     document.getElementById('contactForm').addEventListener('submit', function(event) {
-      event.preventDefault();  // Impede o envio padrão do formulário
-
+      event.preventDefault();  
       fetch(event.target.action, {
           method: 'POST',
           body: new FormData(event.target),
@@ -117,7 +116,7 @@ const titulo = document.querySelector('.titulo');
           }
       }).then(response => {
           if (response.ok) {
-              // Limpa o formulário após o envio
+             
               event.target.reset();
               alert('Mensagem enviada com sucesso!');
           } else {

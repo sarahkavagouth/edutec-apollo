@@ -1,157 +1,335 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Conteúdos</title>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conteúdos</title>
-  <link rel="stylesheet" href="conteudo.css">
-  <script src="./conteudo.js"></script>
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+ 
+    <script src="./conteudo.js"></script>
+    <link rel="stylesheet" href="conteudo.css" />
+  </head>
 
-<body>
-  <div class="header">
-    <header>
+  <body class="center-col">
+    <header class="header">
+      <a class="logo" href="../index.html">
+        <img src="../imagens/logo.png" alt="logo" id="logoImage" />
+      </a>
       <nav>
-        <a class="logo" href="../index.html">Logo</a>
-        <a class="conteudo">Conteúdos</a>
-        <a class="quiz" href="paginas/quiz.html">Quiz</a>
-        <a class="experiencia-3d" href="paginas/experiencia-3d.html">Experiência 3d</a>
-        <a class="filmes-series" href="paginas/filmes-series.html">Filmes e Séries</a>
-        <a class="sistema-solar" href="paginas/sistema-solar.html">Sistema Solar</a>
+        <ul class="center">
+          <li><a class="links" href="./conteudo.html">Conteúdos</a></li>
+          <li>
+            <a class="links" href="../paginas/experiencia-3d.html"
+              >Experiência 3D</a
+            >
+          </li>
+          <li>
+            <a class="links" href="../paginas/filmes-series.html"
+              >Filmes e Séries</a
+            >
+          </li>
+          <li>
+            <a class="links" href="../paginas/sistemasolar.html"
+              >Sistema Solar</a
+            >
+          </li>
+          <li><a class="links" href="../paginas/quiz.html">Quiz</a></li>
+        </ul>
       </nav>
     </header>
-  </div>
 
-  <div class="gravidade">
-    <h2 class="t-c">Gravidade</h2>
+    <style>
+      .black-bg {
+  background-color: rgb(05, 05, 05);
+  height: 100px;
+  border-bottom: 1px solid rgb(107, 104, 104);
+  transition: all 0.4s ease !important;
+}
+    </style>
 
-    <p>Essa teoria explica como a massa de um objeto distorce o espaço-tempo ao seu redor,
-      criando uma espécie de "poço gravitacional". Outros objetos, então, seguem trajetórias
-      curvas nesse espaço deformado, o que percebemos como atração gravitacional.
-      Quanto maior a massa de um objeto, maior é o poço gravitacional que ele cria e mais
-      forte é sua atração gravitacional.
-      A gravidade é essencial para entendermos a dinâmica dos corpos celestes no universo. Ela
-      mantém os planetas em órbita ao redor do Sol, as luas ao redor dos planetas e as
-      estrelas em suas galáxias.
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+  const header = document.querySelector('.header');
 
-      No dia a dia, a gravidade é o que nos mantém firmemente plantados na superfície da Terra.</p>
+  function checkHeaderColor() {
+    const scrollPosition = window.scrollY || window.pageYOffset;
 
-    <img class="img01" "../imagens/conteudo/gpb_circling_earth_1.jpeg" alt="">
-  </div>
+    if (scrollPosition >= 100) {
+      header.classList.add('black-bg');
+    } else {
+      header.classList.remove('black-bg');
+    }
+  }
 
-  <div class="teoria-da-relatividade">
-    <h2 class="t-c">Teoria da Relatividade</h2>
+  window.addEventListener('scroll', checkHeaderColor);
+  checkHeaderColor(); 
+});
+</script>
 
-    <p>A teoria da relatividade geral, desenvolvida por Einstein em 1915,
-      amplia esses conceitos para incluir a gravidade.
-      De acordo com a relatividade geral, a gravidade não é
-      apenas uma força de atração
-      entre objetos com massa, mas sim a manifestação da curvatura do
-      espaço-tempo causada pela presença de massa e energia.
-      Esta curvatura é o que determina
-      a trajetória dos corpos no espaço, incluindo a órbita dos planetas ao redor do Sol
-      e o movimento das estrelas nas galáxias.</p>
-    <img src="" alt="">
-  </div>
+    <div class="layout">
+      <div class="gravidade item center">
+        <div class="item-content center-col">
+          <h2 class="t-c">Gravidade</h2>
 
-  <div class="espaco-tempo">
-    <h2 class="t-c">Espaço Tempo</h2>
+          <p>
+            Essa teoria explica como a massa de um objeto distorce o
+            espaço-tempo ao seu redor, criando uma espécie de "poço
+            gravitacional". Outros objetos, então, seguem trajetórias curvas
+            nesse espaço deformado, o que percebemos como atração gravitacional.
+            Quanto maior a massa de um objeto, maior é o poço gravitacional que
+            ele cria e mais forte é sua atração gravitacional. A gravidade é
+            essencial para entendermos a dinâmica dos corpos celestes no
+            universo. Ela mantém os planetas em órbita ao redor do Sol, as luas
+            ao redor dos planetas e as estrelas em suas galáxias. No dia a dia,
+            a gravidade é o que nos mantém firmemente plantados na superfície da
+            Terra.
+          </p>
+        </div>
 
-    <p> O espaço-tempo combina as três dimensões do espaço (altura, largura e profundidade) com a dimensão do tempo,
-      formando uma estrutura quadridimensional. Isso permite que eventos sejam descritos
-      não apenas em termos de onde e quando ocorrem, mas também em relação à sua posição no tempo.
-      Segundo a teoria da relatividade geral, a presença de massa e energia curva o espaço-tempo ao seu redor.
-      Essa curvatura é o que percebemos como gravidade. Quanto maior a massa de um objeto, maior é a curvatura do
-      espaço-tempo que ele produz.
-      O espaço e o tempo estão intrinsecamente ligados no espaço-tempo.
-      Isso significa que um evento em um ponto do espaço pode afetar eventos em outros pontos do espaço-tempo.</p>
-    <img src="" alt="">
-  </div>
-
-  <div class="variacao-peso">
-    <h2 class="t-c">Variação de Peso</h2>
-
-    <p> Se uma pessoa estiver em outro planeta ou lua, o campo gravitacional será diferente
-      do da Terra, resultando em uma variação de peso.
-      Por exemplo, uma pessoa pesaria menos na Lua do que na Terra, devido à gravidade mais fraca presente no satélite
-      natural.
-
-
-      O peso de um objeto pode variar em diferentes planetas devido à diferença de gravidade em cada um deles. 1 Kg na
-      Terra equivale a:
-
-      Mercúrio: Cerca de 0,38 kg
-      Vênus: Cerca de 0,91 kg
-      Marte: Cerca de 0,38 kg
-      Júpiter: Cerca de 2,34 kg
-      Saturno: Cerca de 0,93 kg
-      Urano: Cerca de 0,92 kg
-      Netuno: Cerca de 1,12 kg</p>
-    <img src="" alt="">
-  </div>
-
-  <div class="variacao-tempo">
-    <h2 class="t-c">Variação de Tempo</h2>
-
-    <p>A variação do tempo é um dos conceitos mais intrigantes da teoria da relatividade de Einstein.
-      Esta teoria desafia nossa noção tradicional de tempo como uma entidade absoluta e propõe que o tempo é relativo,
-      ou seja,
-      sua medida depende do movimento e da gravidade.
-      A teoria da relatividade especial de Einstein, proposta em 1905,
-      introduziu a ideia de que o tempo é percebido de maneira diferente por observadores em movimento relativo uns aos
-      outros.
-      Um dos fenômenos mais famosos dessa teoria é a dilatação do tempo, que significa que o tempo passa mais devagar
-      para um observador em movimento
-      rápido em relação a um observador estacionário.
-      Por exemplo, imagine dois astronautas: um viajando em uma nave espacial em alta velocidade e outro na Terra.
-      Para o astronauta na nave, o tempo passará mais devagar em comparação com o astronauta na Terra, de acordo com a
-      teoria da relatividade especial.
-      Além disso, a teoria da relatividade geral estende essa ideia ao considerar a influência da gravidade na passagem
-      do tempo. De acordo com esta
-      teoria, a presença de massa e energia curva o espaço-tempo ao seu redor.
-      Isso significa que em regiões de forte gravidade, como perto de uma estrela ou buraco negro, o tempo passa mais
-      devagar em comparação
-      com regiões de gravidade mais fraca.
-      Um exemplo prático disso é o fenômeno dos relógios em órbita. Relógios em satélites GPS, por exemplo, experimentam
-      uma dilatação do tempo
-      devido à sua velocidade e à gravidade ligeiramente mais fraca na órbita terrestre. Portanto, eles precisam ser
-      compensados
-      para que continuem a fornecer tempos precisos para a navegação GPS.</p>
-    <img src="" alt="">
-  </div>
-
-  <div class="carousel-container">
-    <button class="prev" onclick="prevSlide()">&#10094;</button>
-    <div class="carousel">
-      <div class="carousel-slide">
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" frameborder="0" allowfullscreen></iframe>
+        <img
+          class="img01"
+          src="../imagens/conteudo/gpb_circling_earth_1.jpeg"
+          alt=""
+        />
       </div>
-      <div class="carousel-slide">
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" frameborder="0" allowfullscreen></iframe>
+
+      <div class="teoria-da-relatividade margin-top item item-reverse center">
+        <div class="item-content center-col">
+          <h2 class="t-c">Teoria da Relatividade</h2>
+
+          <p>
+            A teoria da relatividade geral, desenvolvida por Einstein em 1915,
+            amplia esses conceitos para incluir a gravidade. De acordo com a
+            relatividade geral, a gravidade não é apenas uma força de atração
+            entre objetos com massa, mas sim a manifestação da curvatura do
+            espaço-tempo causada pela presença de massa e energia. Esta
+            curvatura é o que determina a trajetória dos corpos no espaço,
+            incluindo a órbita dos planetas ao redor do Sol e o movimento das
+            estrelas nas galáxias.
+          </p>
+        </div>
+
+        <img src="../imagens/conteudo/images 1.png" alt="" />
       </div>
-      <div class="carousel-slide">
-        <iframe src="https://www.youtube.com/embed/VIDEO_ID_3" frameborder="0" allowfullscreen></iframe>
+
+      <div class="espaco-tempo margin-top item center">
+        <div class="item-content center-col">
+          <h2 class="t-c">Espaço Tempo</h2>
+
+          <p>
+            O espaço-tempo combina as três dimensões do espaço (altura, largura
+            e profundidade) com a dimensão do tempo, formando uma estrutura
+            quadridimensional. Isso permite que eventos sejam descritos não
+            apenas em termos de onde e quando ocorrem, mas também em relação à
+            sua posição no tempo. Segundo a teoria da relatividade geral, a
+            presença de massa e energia curva o espaço-tempo ao seu redor. Essa
+            curvatura é o que percebemos como gravidade. Quanto maior a massa de
+            um objeto, maior é a curvatura do espaço-tempo que ele produz. O
+            espaço e o tempo estão intrinsecamente ligados no espaço-tempo. Isso
+            significa que um evento em um ponto do espaço pode afetar eventos em
+            outros pontos do espaço-tempo.
+          </p>
+        </div>
+
+        <img
+          src="../imagens/conteudo/ponte-de-einstein-rosen 1.png"
+          alt="espaço-tempo"
+        />
+      </div>
+
+      <div class="carousel-container">
+        <button class="prev button" onclick="prevSlide()">&#10094;</button>
+        <div class="container-car">
+          <div class="carousel">
+            <div class="carousel-slide">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/8UqNVzY0EVg?si=Aalyw6fepUOMvH3h"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            </div>
+            <div class="carousel-slide">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/WvQlhMjGo4M?si=wLsLxset9rFzV20f"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            </div>
+            <div class="carousel-slide">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/L9YJ0f4qB2E?si=Bh4LgZa8dYracVAG"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            </div>
+            <div class="carousel-slide">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/W9fnE9NdFzo?si=uZh58HgEGKgh0TxB"
+              title="YouTube video player" frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen></iframe>
+            </div>
+            <div class="carousel-slide">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/fwzzgJOLZkM?si=T63Uu3Wlt-wdMNTZ"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <div class="carousel-slide">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/i93Z7zljQ7I?si=1QdOafxVRg8cOdBC"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <div class="carousel-slide">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/zLFvrurSef8?si=VU-Hd5Qm_EsEO3Ze"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <div class="carousel-slide">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/xVFIPSMbnpk?si=7BAS6bme4Mtn4v4h"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <div class="carousel-slide">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/005pmiNYRF0?si=SMYYovCIyG1d75EM"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <div class="carousel-slide">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/69ugXGntV0I?si=Jh5M1ysnIMDk_Tlj"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            </div>
+            <div class="carousel-slide">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/rEE8ERGKsqo?si=mICWwtVKxb7SkBK7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
+
+
+
+          </div>
+        </div>
+
+        <button class="next button" onclick="nextSlide()">&#10095;</button>
+      </div>
+
+      <div class="variacao-tempo margin-top item item-reverse center">
+        <div class="item-content center-col">
+          <h2 class="t-c">Variação de Tempo</h2>
+
+          <p>
+            A variação do tempo é um dos conceitos mais intrigantes da teoria da
+            relatividade de Einstein. Esta teoria desafia nossa noção
+            tradicional de tempo como uma entidade absoluta e propõe que o tempo
+            é relativo, ou seja, sua medida depende do movimento e da gravidade.
+            A teoria da relatividade especial de Einstein, proposta em 1905,
+            introduziu a ideia de que o tempo é percebido de maneira diferente
+            por observadores em movimento relativo uns aos outros. Um dos
+            fenômenos mais famosos dessa teoria é a dilatação do tempo, que
+            significa que o tempo passa mais devagar para um observador em
+            movimento rápido em relação a um observador estacionário. Por
+            exemplo, imagine dois astronautas: um viajando em uma nave espacial
+            em alta velocidade e outro na Terra. Para o astronauta na nave, o
+            tempo passará mais devagar em comparação com o astronauta na Terra,
+            de acordo com a teoria da relatividade especial. Além disso, a
+            teoria da relatividade geral estende essa ideia ao considerar a
+            influência da gravidade na passagem do tempo. De acordo com esta
+            teoria, a presença de massa e energia curva o espaço-tempo ao seu
+            redor. Isso significa que em regiões de forte gravidade, como perto
+            de uma estrela ou buraco negro, o tempo passa mais devagar em
+            comparação com regiões de gravidade mais fraca. Um exemplo prático
+            disso é o fenômeno dos relógios em órbita. Relógios em satélites
+            GPS, por exemplo, experimentam uma dilatação do tempo devido à sua
+            velocidade e à gravidade ligeiramente mais fraca na órbita
+            terrestre. Portanto, eles precisam ser compensados para que
+            continuem a fornecer tempos precisos para a navegação GPS.
+          </p>
+        </div>
+
+        <img
+          style="height: 1000px"
+          src="../imagens/conteudo/tempo 1.png"
+          alt=""
+        />
+      </div>
+
+      <div class="variacao-peso margin-top item center">
+        <div class="item-content center-col">
+          <h2 class="t-c">Variação de Peso</h2>
+
+          <p>
+            Se uma pessoa estiver em outro planeta ou lua, o campo gravitacional
+            será diferente do da Terra, resultando em uma variação de peso. Por
+            exemplo, uma pessoa pesaria menos na Lua do que na Terra, devido à
+            gravidade mais fraca presente no satélite natural. O peso de um
+            objeto pode variar em diferentes planetas devido à diferença de
+            gravidade em cada um deles. 1 Kg na Terra equivale a: Mercúrio:
+            Cerca de 0,38 kg Vênus: Cerca de 0,91 kg Marte: Cerca de 0,38 kg
+            Júpiter: Cerca de 2,34 kg Saturno: Cerca de 0,93 kg Urano: Cerca de
+            0,92 kg Netuno: Cerca de 1,12 kg
+          </p>
+        </div>
+
+        <img src="../imagens/conteudo/9 1.png" alt="variaçao" />
+      </div>
+
+      <div class="games center">
+        <div class="center-col link-games">
+          <a
+            target="_blank"
+            href="https://wordwall.net/resource/76673714/desvendando-os-mistérios-do-espaço-tempo-quiz-de-astrofísica-e?ref=embed-image"
+            ><img
+              src="https://wordwallscreens.azureedge.net/200/461fab9da8e942ad8a8664a3f3eaa48c_23b"
+              width="200"
+              height="150"
+              style="border: 1px solid grey; display: block"
+            /><span
+              >Desvendando os Mistérios do Espaço-Tempo: Quiz de Astrofísica e
+              Relatividade</span
+            ></a
+          >
+
+          <a
+            target="_blank"
+            href="https://wordwall.net/resource/76673944/sequência-estelar-organize-as-palavras?ref=embed-image"
+            ><img
+              src="https://wordwallscreens.azureedge.net/200/d11fdcacb17e445bbfc9a4340533f221_62"
+              width="200"
+              height="150"
+              style="border: 1px solid grey; display: block"
+            /><span>Sequência Estelar: Organize as Palavras</span></a
+          >
+        </div>
+        <div class="text-games">
+          <h2 class="t-c">Jogos</h2>
+
+          <p>
+            Prepare-se para uma jornada cósmica com nosso quiz interativo! Vire
+            as cartas e descubra perguntas desafiadoras sobre astrofísica e a
+            teoria da relatividade. Cada carta revela uma nova questão que testa
+            seu conhecimento sobre os segredos do universo e as leis que
+            governam o espaço e o tempo. Venha explorar e testar suas
+            habilidades enquanto desbravamos juntos os mistérios do cosmos!
+          </p>
+
+          <p class="p2">
+            Teste sua habilidade e conhecimento cósmico com nosso jogo
+            interativo! Em Sequência Estelar, sua missão é organizar palavras
+            embaralhadas para formar frases corretas sobre astrofísica e espaço.
+            Cada nível apresenta uma nova frase relacionada aos mistérios do
+            universo. Desafie-se e veja como você se sai na organização das
+            palavras enquanto explora o Universo!
+          </p>
+        </div>
       </div>
     </div>
-    <button class="next" onclick="nextSlide()">&#10095;</button>
-  </div>
-
-
-  <div class="games">
-    <a target="_blank"
-      href="https://wordwall.net/resource/76673714/desvendando-os-mistérios-do-espaço-tempo-quiz-de-astrofísica-e?ref=embed-image"><img
-        src="https://wordwallscreens.azureedge.net/200/461fab9da8e942ad8a8664a3f3eaa48c_23b" width="200" height="150"
-        style="border:1px solid grey;display:block" /><span>Desvendando os Mistérios do Espaço-Tempo: Quiz de
-        Astrofísica e Relatividade</span></a>
-
-    <a target="_blank" href="https://wordwall.net/resource/76673944/sequência-estelar-organize-as-palavras?ref=embed-image"><img src="https://wordwallscreens.azureedge.net/200/d11fdcacb17e445bbfc9a4340533f221_62" width="200" height="150" style="border:1px solid grey;display:block" /><span>Sequência Estelar: Organize as Palavras</span></a>
-
-
-  </div>
-
-
-</body>
-
+  </body>
 </html>

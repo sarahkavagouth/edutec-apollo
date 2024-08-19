@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="conteudo.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Carrossel de Planetas</title>
+    <style>
+      body {
+        font-family: Poppins, sans-serif;
+        background-color: #000;
+        color: #fff;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        background-image: url(../imagens/bg-sistema-solar.png);
+      }
+
+      h1 {
+        margin-top: 20px;
+      }
+
+      .carrousel {
+        display: flex;
+        overflow-x: scroll;
+        gap: 10px;
+        padding: 20px;
+        scroll-behavior: smooth;
+        scroll-snap-type: x mandatory; /* For smoother snapping */
+      }
+
+      header {
+        background-color: transparent !important;
+        border: transparent !important;
+      }
+
+      .carrousel img {
+        max-width: 700px;
+        max-height: 700px;
+        min-height: 700px;
+        min-width: 700px;
+        object-fit: contain;
+        border-radius: 50%;
+        transition: transform 0.3s ease;
+        cursor: pointer;
+        scroll-snap-align: center;
+      }
+
+      .carrousel-container {
+        height: 100vh;
+        padding-top: 120px;
+        display: flex;
+        max-width: 720px;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        /* position: relative; */
+        overflow: hidden;
+      }
+
+      .carrousel img:hover {
+        transform: scale(1.1);
+      }
+
+      .carrousel::-webkit-scrollbar {
+        display: none;
+      }
+      .carrousel {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+
+      .nav-button {
+        background-color: rgba(255, 255, 255, 0);
+        border: none;
+        color: #fff;
+        padding: 10px;
+        cursor: pointer;
+        font-size: 70px;
+        position: absolute;
+        top: 10%;
+        transform: translateY(-50%);
+      }
+
+      .nav-prev {
+        left: 60px;
+      }
+
+      .nav-next {
+        right: 60px;
+      }
+
+      body {
+        position: relative;
+        overflow-y: hidden;
+      }
+
+      .current-planet {
+        margin-top: 20px;
+        font-size: 24px;
+        font-weight: bold;
+      }
+
+      .info-planet {
+        font-family: Poppins;
+        margin-top: 120px;
+
+        h2 {
+          font-size: 33px;
+          font-weight: 200;
+          line-height: 1.1;
+        }
+
+        h3 {
+          font-size: 70px;
+          font-weight: 900;
+          letter-spacing: 0.009rem;
+          line-height: 1.1;
+          margin-top: -5px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <a class="logo" href="../index.html">
+        <img src="../imagens/logo.png" alt="logo" id="logoImage" />
+      </a>
+      <nav>
+        <ul class="center">
+          <li><a class="links" href="./conteudo.html">Conteúdos</a></li>
+          <li>
+            <a class="links" href="./experiencia-3d.html"
+              >Experiência 3D</a
+            >
+          </li>
+          <li>
+            <a class="links" href="./sistemasolar.html"
+              >Sistema Solar</a
+            >
+          </li>
+          <li>
+            <a class="links" href="./filmes-series.html"
+              >Filmes e Séries</a
+            >
+          </li>
+          <li><a class="links" href="./quiz.html">Quiz</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="info-planet">
+      <h2>Planeta</h2>
+      <h3 class="current-planet">Mercúrio</h3>
+    </div>
+
+    <div class="carrousel-container">
+      <button class="nav-button nav-prev">&lt;</button>
+      <div class="carrousel">
+        <img
+          src="../imagens/Planetas/mercúrio.png"
+          alt="Mercúrio"
+          title="Mercúrio"
+        />
+        <img src="../imagens/Planetas/venus.png" alt="Vênus" title="Vênus" />
+        <img src="../imagens/Planetas/terra.png" alt="Terra" title="Terra" />
+        <img src="../imagens/Planetas/marte.png" alt="Marte" title="Marte" />
+        <img
+          src="../imagens/Planetas/jupiter.png"
+          alt="Júpiter"
+          title="Júpiter"
+        />
+        <img
+          src="../imagens/Planetas/saturno.png"
+          alt="Saturno"
+          title="Saturno"
+        />
+        <img src="../imagens/Planetas/urano.png" alt="Urano" title="Urano" />
+        <img src="../imagens/Planetas/netuno.png" alt="Netuno" title="Netuno" />
+      </div>
+      <button class="nav-button nav-next">&gt;</button>
+    </div>
+
+    <script>
+      const carrousel = document.querySelector(".carrousel");
+      const planets = document.querySelectorAll(".carrousel img");
+      const currentPlanetDisplay = document.querySelector(".current-planet");
+
+      const prevButton = document.querySelector(".nav-prev");
+      const nextButton = document.querySelector(".nav-next");
+
+      function updateCurrentPlanet() {
+        const carrouselRect = carrousel.getBoundingClientRect();
+        let closestPlanet = planets[0];
+        let closestDistance = Infinity;
+
+        planets.forEach((planet) => {
+          const planetRect = planet.getBoundingClientRect();
+          const planetCenter = planetRect.left + planetRect.width / 2;
+          const carrouselCenter = carrouselRect.left + carrouselRect.width / 2;
+          const distance = Math.abs(planetCenter - carrouselCenter);
+
+          if (distance < closestDistance) {
+            closestDistance = distance;
+            closestPlanet = planet;
+          }
+        });
+
+        const currentPlanet = closestPlanet.alt;
+        currentPlanetDisplay.textContent = `${currentPlanet}`;
+      }
+
+      prevButton.addEventListener("click", () => {
+        carrousel.scrollBy({ left: -400, behavior: "smooth" });
+        setTimeout(updateCurrentPlanet, 300);
+      });
+
+      nextButton.addEventListener("click", () => {
+        carrousel.scrollBy({ left: 400, behavior: "smooth" });
+        setTimeout(updateCurrentPlanet, 300);
+      });
+
+      carrousel.addEventListener("scroll", () => {
+        setTimeout(updateCurrentPlanet, 300);
+      });
+
+      updateCurrentPlanet();
+    </script>
+  </body>
+</html>

@@ -1,32 +1,69 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="quiz.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="quiz.css" />
+    <link rel="stylesheet" href="conteudo.css" />
 
     <title>Quiz</title>
-</head>
+  </head>
 
-<body>
-    <main>
-        <header class="HeaderQuiz">
-            <div>
-                <img src="LOGO.png" alt="Imagem Logo">
-            </div>
-            <div class="HeaderDiv">
-                <a class="HeaderQuizItem" href="#">Quiz</a>
-                <a class="HeaderExperienciaItem" href="experiencia-3d.html">Experiência 3D</a>
-                <a class="HeaderFilmesItem" href="filmes-series.html">Filmes e Séries</a>
-                <a class="HeaderSolarItem" href="sistema-solar.html">Sistema Solar</a>
-            </div>
-        </header>
-        <div class="BackgroundQuiz">
-            <h1 class="QuizTitle">QUIZ</h1>
-            <a class="QuizBtn" href="QuizPgt1.html">Começar</a>
+  <body>
+    <header class="header">
+      <a class="logo" href="../index.html">
+        <img src="../imagens/logo.png" alt="logo" id="logoImage" />
+      </a>
+      <nav>
+        <ul class="center">
+          <li><a class="links" href="../paginas/conteudo.html">Conteúdos</a></li>
+          <li>
+            <a class="links" href="../paginas/experiencia-3d.html"
+              >Experiência 3D</a
+            >
+          </li>
+          <li>
+            <a class="links" href="../paginas/sistemasolar.html"
+              >Sistema Solar</a
+            >
+          </li>
+          <li>
+            <a class="links" href="../paginas/filmes-series.html"
+              >Filmes e Séries</a
+            >
+          </li>
+          <li><a class="links" href="../paginas/quiz.html">Quiz</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="layout-quiz">
+      <div class="BackgroundQuiz center">
+        <div class="QuizContent">
+          <h1 class="QuizTitle">
+            APOLLO <br />
+            QUIZ
+          </h1>
+          <p>Escolha um assunto para começar</p>
         </div>
-    </main>
-</body>
 
+        <div class="center-col links-quiz">
+          <a class="QuizBtn" href="./Quizpergunta1.html">Fundamentos da Gravidade</a>
+          <a class="QuizBtn" href="./Quizpergunta1.html"
+            >Teoria da Relatividade Geral</a
+          >
+          <a class="QuizBtn" href="./Quizpergunta1.html">Dilatação do Tempo</a>
+          <a class="QuizBtn" href="./Quizpergunta1.html"
+            >Espaço-Tempo e Buraco Negros</a
+          >
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
